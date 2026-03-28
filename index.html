@@ -2,94 +2,197 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #fdfbfb, #ebedee, #e0f7fa, #fce4ec, #fff3e0, #e8f5e9, #f3e5f5);
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+
+            /* 7 Light Color Gradient Background */
+            background: linear-gradient(
+                135deg,
+                #fdfbfb,
+                #ebedee,
+                #d4fc79,
+                #96e6a1,
+                #a1c4fd,
+                #c2e9fb,
+                #fbc2eb
+            );
             background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
+            animation: gradientBG 15s ease infinite;
         }
 
         @keyframes gradientBG {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         header {
-            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         header h1 {
-            margin: 0;
+            font-size: 2.5rem;
+            color: #444;
         }
 
         nav {
-            text-align: center;
-            padding: 10px;
-            background-color: #ffffffaa;
+            margin-top: 10px;
         }
 
         nav a {
-            margin: 10px;
+            margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: #555;
             font-weight: bold;
         }
 
+        nav a:hover {
+            color: #000;
+        }
+
         section {
-            padding: 20px;
-            margin: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.85);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #ffffffaa;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            margin-top: 40px;
         }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #4a42cc;
+        }
+
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>My Personal Portfolio</h1>
-    <p>Welcome to my portfolio website</p>
-</header>
+    <header>
+        <h1>Dhanshri Sutar</h1>
+        <p>Student | Learner | Future Professional</p>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#achievement">Achievements</a>
-    <a href="#contact">Contact</a>
-</nav>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I am a student passionate about learning and growing in my academic journey.</p>
-</section>
+    <section id="about">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a passionate student who is eager to learn new technologies 
+                and improve my skills every day. I enjoy working on creative projects 
+                and building my knowledge in various fields.
+            </p>
+        </div>
+    </section>
 
-<section id="achievement">
-    <h2>Academic Achievements</h2>
-    <ul>
-        <li>10th Standard: 83.60% (A Grade)</li>
-        <li>Diploma First Year (First Semester): 88.47% (A Grade)</li>
-    </ul>
-</section>
+    <section id="education">
+        <div class="card">
+            <h2>Academic Achievements</h2>
+            <ul>
+                <li>
+                    <strong>10th Standard:</strong> 
+                    83.60% Marks (A Grade)
+                </li>
+                <li>
+                    <strong>Diploma (First Year - First Semester):</strong> 
+                    88.47% Marks (A Grade)
+                </li>
+            </ul>
+        </div>
+    </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: yourname@email.com</p>
-</section>
+    <section id="skills">
+        <div class="card">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Basic JavaScript</li>
+                <li>Problem Solving</li>
+                <li>Communication Skills</li>
+            </ul>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2026 My Portfolio</p>
-</footer>
+    <section>
+        <div class="card">
+            <h2>Projects</h2>
+            <p>
+                You can add your projects here. For example:
+            </p>
+            <ul>
+                <li>Portfolio Website</li>
+                <li>Simple Calculator</li>
+                <li>Student Management System</li>
+            </ul>
+            <a href="#" class="btn">View Projects</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="card">
+            <h2>Contact Me</h2>
+            <p>Email: dhanshrisutar07@gmail.com</p>
+            <p>Phone: +91 XXXXX XXXXX</p>
+            <p>Location: India</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
